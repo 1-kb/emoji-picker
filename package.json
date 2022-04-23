@@ -1,0 +1,22 @@
+{
+  "name": "@1-kb/emoji-picker",
+  "version": "0.0.1-alpha.4",
+  "description": "Select cute emoticons here 😍",
+  "main": "dist/emoji-picker.umd.js",
+  "module": "dist/emoji-picker.es.js",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build -c ./vite.build.config.js"
+  },
+  "files": [
+    "dist/*",
+    "README.md"
+  ],
+  "author": "Gitai<i@gitai.me>",
+  "license": "WTFPL",
+  "devDependencies": {
+    "lodash-es": "^4.17.21",
+    "deno": "^0.1.1",
+    "vite": "^2.9.5"
+  }
+}
