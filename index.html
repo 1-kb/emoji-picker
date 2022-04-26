@@ -1,52 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Emoji Picker</title>
-    <style>
-      body {
-        margin: 0 72px;
-      }
-      #app, main {
-        font-size: 72px;
-      }
-      #app {
-        display: flex;
-        align-items: center;
-        height: 100vh;
-        max-width: 1200px;
-        margin: auto;
-      }
-      main {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-content: center;
-        margin: 2em;
-      }
-      h4 {
-        text-align: right;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="app">
-      <main>
-        <emoji-picker>🐄</emoji-picker>
-        <emoji-picker>🥗</emoji-picker>
-        <emoji-picker>😍</emoji-picker>
-        <emoji-picker>✔</emoji-picker>
-      </main>
-      <header>
-        <h1><emoji-picker>⛏</emoji-picker>Picker</h1>
-        <h4>Proj. 1Kb</h4>
-        <h5>
-          <img src="https://img.shields.io/badge/gzip-2%20Kb-green"/>
-          <img src="https://img.shields.io/github/license/1-kb/emoji-picker"/>
-        </h5>
-      </header>
-    </div>
-    <script type="module" src="https://unpkg.com/@1-kb/emoji-picker/dist/emoji-picker.es.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emoji Picker</title>
+  <style>
+    body {
+      margin: 0 72px;
+    }
+
+    #app,
+    main {
+      font-size: 72px;
+    }
+
+    #app {
+      display: flex;
+      align-items: center;
+      height: 100vh;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-content: center;
+      margin: 2em;
+    }
+
+    h4 {
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <main>
+      <lc-emoji>🐄</lc-emoji>
+      <lc-emoji>🥗</lc-emoji>
+      <lc-emoji>😍</lc-emoji>
+      <lc-emoji>✔</lc-emoji>
+    </main>
+    <header>
+      <h1>
+        <lc-emoji>⛏</lc-emoji>Picker
+      </h1>
+      <h4>Prj. 1-Kb</h4>
+      <footer>
+        <img src="https://img.shields.io/bundlephobia/minzip/@1-kb/emoji-picker" />
+        <!-- <img src="https://img.shields.io/tokei/lines/github/1-kb/emoji-picker" /> -->
+        <a href="https://github.com/1-kb/emoji-picker"><img src="https://img.shields.io/github/license/1-kb/emoji-picker" /></a>
+      </footer>
+    </header>
+  </div>
+  <script type="module">
+    import(location.host.startsWith('local') ? "./src/index.tsx" : "https://unpkg.com/@1-kb/emoji-picker/dist/emoji-picker.es.js")
+  </script>
+</body>
+
 </html>

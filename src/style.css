@@ -32,7 +32,6 @@ li {
     text-align: center;
 }
 input {
-    display: inline-block;
     float: left;
     height: 0;
     border: 0;

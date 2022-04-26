@@ -1,3 +1,5 @@
+/// <reference types="vite/client" />
+
 export const CATEGORIES = {
   "Smileys & Emotion": '🧐',
   "People & Body": '✌',
@@ -11,7 +13,7 @@ export const CATEGORIES = {
 };
 
 export let fetchEmoji = async () => {
-  const resp = await fetch("https://unpkg.com/@1-kb/emoji-picker/dist/assets/emoji.bin");
+  const resp = await fetch(import.meta.env.PROD ? "https://unpkg.com/@1-kb/emoji-picker/dist/assets/emoji.bin" : "./assets/emoji.bin");
   const buf = await resp.arrayBuffer();
 
   return [...new Uint32Array(new Uint8Array(buf).buffer)]
