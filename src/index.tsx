@@ -1,5 +1,5 @@
-import { CATEGORIES, createSheet, fetchEmoji } from "./helper";
-import { define, h, shadowRoot } from "./lc";
+import { CATEGORIES, fetchEmoji } from "./helper";
+import { define, h, shadowRoot, createSheet } from "./lc";
 import { addEventListener, removeEventListener } from "lib0/dom";
 import styles from "./style.css?inline";
 import { appendChild } from "lib0/dom";
@@ -11,8 +11,8 @@ function onEmojiPickerPointerOut(e: Event) {
 }
 
 function onEmojiPickerPointerUp(e: Event) {
-  const target = e.path[0];
-  if (target.tagName === "LI") {
+  const target = e.target;
+  if (target?.tagName === "LI") {
     requestAnimationFrame(() => {
       this.textContent = target.textContent;
     });
@@ -65,3 +65,4 @@ define(function emoji() {
     appendChild(this[shadowRoot], root);
   });
 }, 'lc-emoji');
+

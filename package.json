@@ -1,6 +1,6 @@
 {
   "name": "@1-kb/emoji-picker",
-  "version": "0.0.1-alpha.8",
+  "version": "0.0.1-alpha.11",
   "description": "Select cute emoticons here 😍",
   "main": "dist/emoji-picker.umd.js",
   "module": "dist/emoji-picker.es.js",
@@ -18,10 +18,12 @@
   "devDependencies": {
     "deno": "^0.1.1",
     "lodash-es": "^4.17.21",
-    "terser": "^5.12.1",
-    "vite": "^2.9.5"
+    "terser": "^5.12.1"
   },
   "dependencies": {
-    "lib0": "^0.2.51"
+    "lib0": "^0.2.51",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "vite": "^2.9.9"
   }
 }

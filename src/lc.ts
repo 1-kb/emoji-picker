@@ -2,6 +2,7 @@ import { appendChild, createElement, createTextNode } from "lib0/dom";
 export const shadowRoot = Symbol("shadowRoot");
 
 export function define(factory: Function, name: string = "lc-" + factory.name) {
+  if (customElements.get(name)) return;
   customElements.define(
     name,
     class extends HTMLElement {
@@ -39,5 +40,11 @@ export const h = (tag, attrs, ...childs: any[]) => {
     }
   });
 
+  return el;
+};
+
+export const createSheet = (css: string) => {
+  const el = new CSSStyleSheet();
+  el.replaceSync(css);
   return el;
 };
